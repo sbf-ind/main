@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunita Biofuels | Powering a Sustainable Future</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container flex">
+            <div class="logo-space">
+                <a href="#home" class="logo-link">
+                    <img src="logo.png" 
+                         alt="Sunita Biofuels Private Limited" 
+                         class="main-logo">
+                </a>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#mission">Our Mission</a></li>
+                    <li><a href="#process">The Technology</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content reveal">
+            <div class="hero-content-centered">
+                <span class="badge">The Future of Clean Energy</span>
+                <h1>Transforming Agricultural Waste into <br><span class="highlight">Carbon-Neutral Power</span></h1>
+                <p class="lead-text">Sunita Biofuels Private Limited pioneers the transition away from fossil fuels. We convert leftover crop residue into high-density biomass pellets—a reliable, sustainable, and economically viable replacement for coal in industrial boilers and power plants.</p>
+                <div class="cta-group">
+                    <a href="#mission" class="btn btn-primary">Discover Our Impact</a>
+                    <a href="#contact" class="btn btn-outline">Partner With Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mission" class="mission-section container spacing">
+        <div class="grid-2 reveal">
+            <div class="image-placeholder main-img-container">
+                <img src="pellet.jpg" alt="Golden wheat field representing agricultural residue" class="main-img">
+            </div>
+            <div class="text-content align-center">
+                <h5>Our Core Purpose</h5>
+                <h2>Combatting Pollution by <span class="text-green">Valorizing Waste</span></h2>
+                <p>Every harvest season, millions of tonnes of agricultural stubble are burned in fields, releasing severe pollutants and greenhouse gases into the atmosphere. This practice degrades soil health and creates a public health crisis.</p>
+                <p>Sunita Biofuels was established to break this destructive cycle. We view crop residue not as waste, but as a valuable energy resource. By creating a market for this residue, we incentivize farmers against burning, improve air quality, and provide industries with a cleaner fuel alternative.</p>
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Renewable Feedstock</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>Zero</h3>
+                        <p>Net Carbon Increase</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="video-tour" class="video-section bg-dark spacing">
+        <div class="container reveal container-small">
+            <div class="center-text mb-50">
+                 <h2 style="color: #fff;">See Transformation in Action</h2>
+                 <p style="color: #ccc;">Witness how raw agricultural biomass is processed through our advanced machinery into uniform, high-energy fuel pellets ready for industrial use.</p>
+            </div>
+            <div class="video-wrapper">
+                <!-- <video controls poster="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop"> -->
+                <video controls poster="logo.png" width=500 heigh=500>
+                    <source src="company-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="process-section spacing">
+        <div class="container">
+            <div class="center-text mb-50 reveal">
+                <h2>The Biomass Pellet Advantage</h2>
+                <p>Our scientifically engineered pellets offer superior performance characteristics compared to raw biomass and traditional fossil fuels.</p>
+            </div>
+            <div class="grid-3">
+                <div class="card reveal delay-1">
+                    <div class="icon-box">🌱</div>
+                    <h3>Sustainable Sourcing & Rural Economy</h3>
+                    <p>We have established robust supply chains directly with local farming communities. By purchasing crop residue that would otherwise be burned, we provide farmers with an additional income stream, boosting the rural economy while securing a consistent, ethical supply of raw materials for our production.</p>
+                </div>
+                <div class="card reveal delay-2">
+                    <div class="icon-box">⚙️</div>
+                    <h3>Advanced Densification Technology</h3>
+                    <p>Raw biomass is bulky and inefficient to transport or burn. Our state-of-the-art manufacturing facility uses high-pressure densification technology to compress this material. The result is a uniform, dense pellet with significantly reduced moisture content and a much higher calorific value by volume.</p>
+                </div>
+                <div class="card reveal delay-3">
+                    <div class="icon-box">🔥</div>
+                    <h3>Efficient, Cleaner Combustion</h3>
+                    <p>Sunita Biofuels pellets are designed for direct co-firing in existing coal boilers. They burn consistently and efficiently, emitting significantly lower levels of sulfur oxides (SOx) and nitrogen oxides (NOx) compared to coal, helping industries meet stringent environmental regulations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container center-text">
+            <h3>Sunita Biofuels Private Limited</h3>
+            <p>Powering industries, protecting the planet.</p>
+            <br>
+            <p>Contact for Queries: sunitabiofuels@gmail.com | +91-9994444333</p>
+            <p class="copyright">&copy; 2026 Sunita Biofuels Private Limited. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
